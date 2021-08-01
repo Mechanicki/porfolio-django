@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuwanie posta</title>
+</head>
+<body>
+    <p>Czy chcesz usunąć post {{item}} </p>
+    <form action="{% url 'delete_post' post.id%}" method="POST">
+        {%csrf_token%}
+        <a href="{%url 'index'%}">Wróć</a>
+
+        <input type="submit" name="Confirm" value="Usuń">
+
+    </form>
+
+</body>
+</html>

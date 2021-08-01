@@ -1,0 +1,7 @@
+*.sqlite3
+/porfolio/
+/__pycache__/
+/manage.py/
+/PostApp/__pycache__/
+/PostApp/migrations/
+/PostApp/static/
