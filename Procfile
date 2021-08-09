@@ -1,0 +1,1 @@
+web: gunicorn django-porfolio.wsgi --log-file - 
