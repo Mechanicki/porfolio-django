@@ -6,4 +6,4 @@ from .models import *
 admin.site.register(Pseudo_User)
 admin.site.register(Post)
 admin.site.register(Post_comments)
-admin.site.register(Post_reactions)
+admin.site.register(UserProfile)

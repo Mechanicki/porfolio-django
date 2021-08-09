@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuwanie posta</title>
+
+    {%extends 'PostApp/site_temp.html'%}
 </head>
+
 <body>
-    <p>Czy chcesz usunąć post {{item}} </p>
-    <form action="{% url 'delete_post' post.id%}" method="POST">
-        {%csrf_token%}
-        <a href="{%url 'index'%}">Wróć</a>
-
-        <input type="submit" name="Confirm" value="Usuń">
-
-    </form>
-
+        {%block content%}
+            <div class= 'd-flex justify-content-center'>
+                    <form action="{% url 'delete_post' post.id%}" method="POST" class = 'card  border-danger   p-3 m-3 w-25'>
+                        {%csrf_token%}
+                        <p style = 'font-size: larger;'>Czy chcesz usunąć post ?</p>
+                        <a href="{%url 'index'%}" class = 'btn btn-lg btn-primary m-3'>Wróć</a>
+                
+                        <input type="submit" name="Confirm" value="Usuń" class = 'btn btn-lg btn-danger m-3'>
+                
+                    </form>
+            </div>
+            {%endblock%}
 </body>
 </html>

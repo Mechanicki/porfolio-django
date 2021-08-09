@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment section</title>
+</head>
+<body > 
+    <div class = 'd-flex justify-content-center '>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form_com}}
+            <input class = 'mx-3' type="submit" name="Add_comment" value="Dodaj">
+        </form>
+    
+        <div class="card m-3 " style="width: 25rem;">
+        <ul class="list-group list-group-flush m-3 border">
+            {%for comm in comments%}
+            <li class="list-group-item ">{{comm.content}}</li>
+            {%endfor%}
+        </ul>
+        </div>
+    </div>
+</body>
+</html>
